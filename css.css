@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(#200016 , #10001f);
+    height: 100vh;
+    font-family: system-ui;
+}
+a{
+    text-decoration:  none;
+    color: #ffff;
+}
+header{
+
+    position:  fixed;
+    width: 95%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+header .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li {
+    margin-right: 30px;
+}
+header ul li a {
+padding: 6px 15px;
+}
+header ul li a:hover , .active {
+    background: #ffff;
+    border-radius: 20px;
+    color: #10001f;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100vh ;
+        width: 100%;
+        overflow: hidden;
+    }
+    .main::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        background: linear-gradient( to top ,#200016 , transparent);
+    }
+    .main img{
+        position: absolute;
+        width: 100%;
+        height: 95hv;
+        object-fit: cover;
+
+    }
+    #moon{
+        mix-blend-mode: screen;
+        transform: translateY(80px);
+    }
+    .hello{
+        color: #ffff;
+        font-size: 28px;
+        transform: translateY(-140px);
+    }
+    .content{
+        color: #ffff;
+        padding: 30px;
+    }
+    .content h2{
+        font-size: 30px;
+        margin: 56px;
+    }
+    .content p {
+        margin: 20px;
+
+    }
