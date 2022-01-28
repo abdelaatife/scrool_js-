@@ -1,5 +1,5 @@
 # scrool_js-
-it's simple animation on scrolling made withe ***html css & js*** none responsive .
+it's simple animation on scrolling made withe ***html css & js***  responsive .
 
 
  you can see the action from 

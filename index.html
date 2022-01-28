@@ -6,16 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <a href="#" class="logo"> LOGO</a>
-        <ul>
-            <li><a href="#" class="active" >home</a></li>
-            <li><a href="#" >prodeuct</a></li>
-            <li><a href="#">  shope</a></li>
-            <li><a href="#" >about</a></li>
-            <li><a href="#" >contact</a></li>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <ul class="nav-links">
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li class="services">
+              <a href="/">Services</a>
+              <ul class="dropdown">
+                <li><a href="/">act 1 </a></li>
+                <li><a href="/">act 2</a></li>
+                <li><a href="/">act 2</a></li>
+                <li><a href="/">act 3</a></li>
+                <li><a href="/">act 4</a></li>
+              </ul>
+            </li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Contact</a></li>
+          </div>
         </ul>
-    </header>
+      </nav>
+    
     <section class="main">
 <img src="img/stars1.webp" alt="stars" id="stars">
 <h2 class="hello">HELLO</h2>

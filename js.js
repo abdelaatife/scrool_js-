@@ -8,6 +8,7 @@ let hello = document.querySelector(".hello")
 
 window.onscroll = function () {
     let value = scrollY ;
+    
     stars.style.left = value + 'px' ;
     mountains3.style.top = value *1.5 + 'px' ;
     moon.style.top = value *4 + 'px' ;
@@ -18,7 +19,7 @@ window.onscroll = function () {
   hello.style.fontSize = value  + 'px' ;
   if (scrollY >= 67) {
     hello.style.fontSize = 67  + 'px' ;
-    hello.style.position = 'fixed' ;
+    hello.style.position = 'fixed' ; }
     if (scrollY >= 412) {
         hello.style.display = 'none' ;
     }
@@ -33,8 +34,16 @@ window.onscroll = function () {
     }
 
       
-  }
+ 
 
 
 
 }
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  } 

@@ -11,8 +11,10 @@ a{
     text-decoration:  none;
     color: #ffff;
 }
-header{
-
+li {
+    list-style: none;
+   }
+   .navbar {
     position:  fixed;
     width: 95%;
     z-index: 10;
@@ -20,28 +22,76 @@ header{
     justify-content: space-between;
     align-items: center;
     margin: 30px;
-}
-header .logo{
+    color: #fff;
+
+   }
+   .nav-links a {
+    color: #fff;
+   }
+   .nav-links a:hover {
+        color: #10001f;
+
+   }
+   /* LOGO */
+   .logo {
     font-size: 30px;
     text-transform: uppercase;
-}
-header ul {
-    list-style: none;
+   }
+   /* NAVBAR MENU */
+   .menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header ul li {
-    margin-right: 30px;
-}
-header ul li a {
-padding: 6px 15px;
-}
-header ul li a:hover , .active {
-    background: #ffff;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+   background: #ffff;
     border-radius: 20px;
     color: #10001f;
-    }
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+   /* DROPDOWN MENU */
+   .services {
+    position: relative; 
+   }
+   .dropdown {
+    background-color: transparent;
+    padding: 1em 0;
+    opacity: initial;
+    position: absolute; 
+    display: none;
+    z-index: 2;
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown li + li {
+    margin-top: 10px;
+   }
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown li:hover {
+    background-color: #fff ;
+    color: #10001f;
+    
+   }
+   .services:hover .dropdown {
+    display: block;
+   }
+   input[type=checkbox]{
+    display: none;
+   } 
+   .hamburger {
+    margin-right: 8px;
+    display: none;
+    font-size: 34px;
+    user-select: none;
+   }
+
     .main{
         display: flex;
         justify-content: center;
@@ -87,3 +137,81 @@ header ul li a:hover , .active {
         margin: 56px;
 
     }
+   
+      
+      /*media */
+   @media (max-width: 768px) {
+    .menu { 
+     display:none;
+     position: absolute;
+     z-index: 2;
+     background-color:#200016;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+    }
+    .menu li:hover {
+     display: inline-block;
+     background-color:#fff;
+     transition: 0.3s ease;
+    }
+    .menu li + li {
+     margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+     display: block;
+    }
+    .hamburger {
+     display: block;
+    }
+    .dropdown {
+     left: 50%;
+     top: 30px;
+     transform: translateX(35%);
+    }
+    .dropdown li:hover {
+     background-color: #fff;
+    }
+    /*main*/
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        height: 60vh ;
+        width: 100%;
+        overflow: hidden;
+    }
+   
+    .main img{
+        position: absolute;
+        width: 100%;
+        height: 95hv;
+        object-fit: cover;
+
+    }
+    #moon{
+        mix-blend-mode: screen;
+        transform: translateY(10px);
+    }
+    .hello{
+        color: #ffff;
+        font-size: 12px;
+        transform: translateY(130px);
+    }
+    .content{
+        color: #ffff;
+        padding: 30px;
+    }
+    .content h2{
+        font-size: 30px;
+        margin: 56px;
+    }
+    .content p {
+        margin: 56px;
+
+    }
+
+    }
+ 
